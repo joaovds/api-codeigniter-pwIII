@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
-    <title>Home</title>
+    <title>Create User</title>
   </head>
   <body style="background-color: #121212;">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
@@ -50,69 +50,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </nav>
 
-    <main class="container">
+    <div class="container">
       <div class="row mt-5">
         <div class="col-12 d-flex flex-row justify-content-between align-items-center">
-          <h2 class="fw-bold text-muted">Users</h2>
-
-          <a href="createUser" class="btn btn-outline-info">
-            <i class="bi bi-plus-circle fs-5">&nbsp;Novo</i>
-          </a>
+          <h2 class="fw-bold text-muted">Novo User</h2>
         </div>
       </div>
 
-      <div class="row mt-3">
-        <div class="col-12 table-responsive">
-          <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>João Victor</td>
-                <td>email@teste1.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
-                    Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
-                    Deletar
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>João Victor2</td>
-                <td>email@teste2.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
-                    Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
-                    Deletar
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>João Victor3</td>
-                <td>email@teste3.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
-                    Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
-                    Deletar
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="row mt-2">
+        <div class="col-12 text-light">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" class="form-control form-control-lg" id="name">
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control form-control-lg" id="email">
+            </div>
+            <div class="col-md-6">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control form-control form-control-lg" id="password">
+            </div>
+            <div class="col-md-6"></div>
+
+            <div class="d-grid gap-2 col-md-4 mt-2 mt-md-5">
+              <button type="submit" class="btn btn-primary">Criar</button>
+            </div>
+          </form>
         </div>
       </div>
-    </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   </body>
