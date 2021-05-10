@@ -46,10 +46,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <i class="bi bi-search"></i>
             </button>
           </form>
-
-          <div class="d-flex ms-md-3 mt-3 mt-md-0">
-            <i class="bi bi-box-arrow-right text-warning fs-5"></i>
-          </div>
         </div>
       </div>
     </nav>
