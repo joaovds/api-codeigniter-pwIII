@@ -40,7 +40,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
           </ul>
 
-          <div class="d-flex">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
+            <button class="btn btn-outline-info" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <div class="d-flex ms-md-3 mt-3 mt-md-0">
             <i class="bi bi-box-arrow-right text-warning fs-5"></i>
           </div>
         </div>
@@ -49,8 +56,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <main class="container">
       <div class="row mt-5">
-        <div class="col-12">
-          <h2 class="fw-bold text-info">Users</h2>
+        <div class="col-12 d-flex flex-row justify-content-between align-items-center">
+          <h2 class="fw-bold text-muted">Users</h2>
+
+          <a href="#" class="btn btn-outline-info">
+            <i class="bi bi-plus-circle fs-5">&nbsp;Novo</i>
+          </a>
         </div>
       </div>
 
