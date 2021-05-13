@@ -59,18 +59,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row mt-2">
         <div class="col-12 text-light">
-          <form class="row g-3">
+          <form class="row g-3" action="<?= base_url('create') ?>" method="post">
             <div class="col-md-6">
               <label for="name" class="form-label">Nome</label>
-              <input type="text" class="form-control form-control-lg" id="name">
+              <input type="text" class="form-control form-control-lg" name="name">
             </div>
             <div class="col-md-6">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control form-control-lg" id="email">
+              <input type="email" class="form-control form-control-lg" name="email">
             </div>
             <div class="col-md-6">
               <label for="password" class="form-label">Senha</label>
-              <input type="password" class="form-control form-control form-control-lg" id="password">
+              <input type="password" class="form-control form-control form-control-lg" name="password">
             </div>
             <div class="col-md-6"></div>
 
