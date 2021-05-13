@@ -63,52 +63,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <div class="row mt-3">
         <div class="col-12 table-responsive">
-          <table class="table table-dark">
+          <table class="table table-dark table-bordered table-striped">
             <thead>
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col"></th>
+                <th scope="col" class="p-3">Name</th>
+                <th scope="col" class="p-3">Email</th>
+                <th scope="col" class="text-center p-3"><i class="fs-5 text-info bi bi-pencil"></i></th>
+                <th scope="col" class="text-center p-3"><i class="fs-5 text-danger bi bi-trash"></i></th>
               </tr>
             </thead>
+            <?php foreach ($data as $key => $value) : ?>
             <tbody>
               <tr>
-                <td>João Victor</td>
-                <td>email@teste1.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
+                <td class="p-3 text-nowrap"><?= $value->name ?></td>
+                <td class="p-3 text-nowrap"><?= $value->email ?></td>
+                <td class="text-center py-3">
+                  <a href="#" class="text-dark btn text-decoration-none me-3 badge bg-info">
                     Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
-                    Deletar
                   </a>
                 </td>
-              </tr>
-              <tr>
-                <td>João Victor2</td>
-                <td>email@teste2.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
-                    Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
-                    Deletar
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>João Victor3</td>
-                <td>email@teste3.com</td>
-                <td>
-                  <a href="#" class="fs-6 text-light me-3">
-                    Editar
-                  </a>
-                  <a href="#" class="fs-6 text-danger">
+                <td class="text-center py-3">
+                  <a href="#" class="text-white btn text-decoration-none me-3 badge bg-danger">
                     Deletar
                   </a>
                 </td>
               </tr>
             </tbody>
+            <?php endforeach ?>
           </table>
         </div>
       </div>
