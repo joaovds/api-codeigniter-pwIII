@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CreateUser extends CI_Controller {
+class User extends CI_Controller {
   public function __construct(){
     parent::__construct();
     $this->load->model('UserModel');
@@ -15,6 +15,12 @@ class CreateUser extends CI_Controller {
     $user = new UserModel();
     $user->create();
     redirect(base_url('createUser'));
+  }
+
+  public function deleteUser($cd) {
+    $this->db->where('cd', $cd);
+    $this->db->delete('tb_user');
+    redirect(base_url('home'));
   }
 }
 ?>
