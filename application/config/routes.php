@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['createUser'] = 'user';
 $route['create'] = 'user/create';
 $route['deleteUser/(:any)'] = 'user/deleteUser/$1';
+$route['updateUser/(:any)'] = 'user/loadUpdateUserView/$1';
+$route['update/(:any)'] = 'user/updateUser/$1';

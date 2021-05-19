@@ -16,5 +16,16 @@ class UserModel extends CI_Model {
 
     return $this->db->insert('tb_user', $data);
   }
+
+  public function update($cd) {
+    $data = array(
+      'name' => $this->input->post('name'),
+      'email' => $this->input->post('email')
+    );
+
+    $this->db->where('cd', $cd);
+
+    return $this->db->update('tb_user', $data);
+  }
 }
 ?>

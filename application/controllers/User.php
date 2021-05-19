@@ -22,5 +22,17 @@ class User extends CI_Controller {
     $this->db->delete('tb_user');
     redirect(base_url('home'));
   }
+
+  public function loadUpdateUserView($cd) {
+    $data['data'] = $this->db->get_where('tb_user', array('cd' => $cd))->row();
+
+    $this->load->view('updateUser', $data);
+  }
+
+  public function updateUser($cd) {
+    $user = new UserModel();
+    $user->update($cd);
+    redirect(base_url('home'));
+  }
 }
 ?>
