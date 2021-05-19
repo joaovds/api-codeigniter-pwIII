@@ -12,5 +12,11 @@ class Home extends CI_Controller {
 
     $this->load->view('home', $data);
   }
+
+  public function deleteUser($cd) {
+    $this->db->where('cd', $cd);
+    $this->db->delete('tb_user');
+    redirect(base_url('home'));
+  }
 }
 ?>

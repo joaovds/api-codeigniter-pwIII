@@ -83,9 +83,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </a>
                 </td>
                 <td class="text-center py-3">
-                  <a href="#" class="text-white btn text-decoration-none me-3 badge bg-danger">
-                    Deletar
-                  </a>
+                  <form method="delete" action="<?= base_url('deleteUser/'.$value->cd) ?>">
+                    <button class="text-white btn text-decoration-none me-3 badge bg-danger">
+                      Deletar
+                    </button>
+                  </form>
                 </td>
               </tr>
             </tbody>
